@@ -1,8 +1,11 @@
 <header class="site-header">
 
-  <div class="wrapper">
+  <div class="">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="site-title" href="{{ site.baseurl }}/">
+      <!--Fix this iamge-->
+      <img src="assets/img/rectangle_LOGO_RGB.png" alt="Kugghuset logo">
+    </a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -13,13 +16,13 @@
         </svg>
       </a>
 
-      <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
+      <ul class="">
+        {% for link in site.data.links %}
+          <li class="page-link">
+            <a target="_blank" href="{{ link.url }}">{{ link.name }}</a>
+          </li>
         {% endfor %}
-      </div>
+      </ul>
     </nav>
 
   </div>
