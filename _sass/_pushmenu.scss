@@ -1,0 +1,17 @@
+* {
+  -webkit-transition: transform 0.3s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-transition: transform 0.3s; /* Firefox < 16 */
+      -ms-transition: transform 0.3s; /* Internet Explorer */
+       -o-transition: transform 0.3s; /* Opera < 12.1 */
+          transition: transform 0.3s; 
+}
+
+.pushmenu {
+  background-color: $color-background;
+  position: fixed;
+  width: 250px;
+  z-index: 999;
+  top: 0;
+  height: 100%;
+  right: -250px;
+}
