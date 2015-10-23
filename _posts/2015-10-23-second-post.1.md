@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "First post"
+title:  "Second post"
 date:   2015-10-23 09:57:44
 categories: kugghuset general
 author: "Kristoffer Östlund"

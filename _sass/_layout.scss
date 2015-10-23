@@ -182,6 +182,10 @@
   }
 }
 
+.post-list-item:not(:last-of-type) {
+  border-bottom: 1px solid #bbb;
+}
+
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
@@ -202,12 +206,10 @@
 }
 
 .post-title {
-  font-size: 42px;
-  letter-spacing: -1px;
-  line-height: 1;
-
-  @include media-query($on-laptop) {
-    font-size: 36px;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
   }
 }
 
