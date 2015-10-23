@@ -1,0 +1,23 @@
+{
+  "name": "kugghuset.github.io",
+  "version": "1.0.0",
+  "description": "A blog written using Jekyll for Kugghuset.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kugghuset/kugghuset.github.io.git"
+  },
+  "author": "Kristoffer Ostlund",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kugghuset/kugghuset.github.io/issues"
+  },
+  "homepage": "https://github.com/Kugghuset/kugghuset.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0"
+  }
+}
