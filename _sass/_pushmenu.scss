@@ -7,11 +7,8 @@
 }
 
 .pushmenu {
-  background-color: $color-background;
   position: absolute;
   z-index: 999;
-  top: 10px;
-  height: 100%;
   right: -250px;
 }
 
@@ -20,5 +17,5 @@
      -moz-transform: translateX(-250px); /* Firefox < 16 */
       -ms-transform: translateX(-250px); /* Internet Explorer */
        -o-transform: translateX(-250px); /* Opera < 12.1 */
-          transform: translateX(-250px); 
+          transform: translateX(-250px);
 }

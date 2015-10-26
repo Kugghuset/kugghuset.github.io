@@ -1,7 +1,7 @@
 @include breakpoint($on-laptop) {
   .site-header {
     padding: 25px 80px;
-    width: auto;
+    // width: auto;
   }
   .push-open {
     -webkit-transform: translateX(0px); /* Safari, Chrome and Opera > 12.1 */
