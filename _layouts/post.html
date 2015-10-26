@@ -2,14 +2,14 @@
 layout: default
 ---
 <div class="post">
-
+  <h1 class="page-heading fade-in">
+    <a href="{{ site.baseurl }}/">Back to recent</a>
+  </h1>
   <header class="post-header fade-in">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
-
   <article class="post-content">
     {{ content }}
   </article>
-
 </div>
