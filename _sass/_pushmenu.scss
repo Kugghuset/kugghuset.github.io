@@ -8,8 +8,8 @@
 
 .pushmenu {
   background-color: $color-background;
-  position: fixed;
-  width: 250px;
+  position: absolute;
+  // width: 250px;
   z-index: 999;
   top: 0;
   height: 100%;
