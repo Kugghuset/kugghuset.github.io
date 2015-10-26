@@ -1,5 +1,5 @@
-- name: Kugghuset hem
+- name: Kugghuset homepage
   url: http://www.kugghuset.se/
 
-- name: Om oss
+- name: About
   url: http://www.kugghuset.se/om-kugghuset/ 
