@@ -1,0 +1,22 @@
+@include breakpoint($on-laptop) {
+  .site-header {
+    padding: 25px 80px;
+    width: auto;
+  }
+  .push-open {
+    -webkit-transform: translateX(0px); /* Safari, Chrome and Opera > 12.1 */
+      -moz-transform: translateX(0px); /* Firefox < 16 */
+        -ms-transform: translateX(0px); /* Internet Explorer */
+        -o-transform: translateX(0px); /* Opera < 12.1 */
+            transform: translateX(0px); 
+  }
+  .site-nav {
+    .menu-icon {
+      display: none;
+    }
+    .pushmenu {
+      position: static;
+      top: 0;
+    }
+  }
+}

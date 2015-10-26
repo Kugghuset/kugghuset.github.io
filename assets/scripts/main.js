@@ -24,17 +24,13 @@
   })();
   
   var hamburger = document.getElementById('hamburger');
-  var pushmenu = document.getElementById('pushmenu');
+  var pageWrapper = document.getElementById('page-wrapper');
 
   function hamburgerClickHandler(e) {
-    if (/ open|open /g.test(pushmenu.className)) {
-      pushmenu.className = pushmenu.className.replace(/open/, '');
-      document.body.style[transformProp] = 'translateX(0)';
-      // if (transformProp === 'msTransform')
+    if (/ push-open/g.test(pageWrapper.className)) {
+      pageWrapper.className = pageWrapper.className.replace(/ push-open/, '');
     } else {
-      pushmenu.className += ' open';
-      document.body.style[transformProp] = 'translateX(-250px)';
-      // if (transformProp === 'msTransform')
+      pageWrapper.className += ' push-open';
     }
   }
   
