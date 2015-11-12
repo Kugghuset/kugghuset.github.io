@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var spawn = require('child_process').spawn;
 var exec = require('child_process').exec;
+var livereload = require('gulp-livereload');
 
 var jekyll;
 // process name for jekyll - 
@@ -18,12 +19,17 @@ gulp.task('serve', function () {
   });
 });
 
-gulp.task('watch', function () {
-  gulp.watch(['*'], ['serve']);
+gulp.task('reload', function () {
+  livereload.reload();
 });
 
-gulp.task('default', ['serve']);
+gulp.task('watch', function () {
+  gulp.watch(['./_site/**/*'], ['reload']);
+});
+
+livereload.listen();
+gulp.task('default', ['serve', 'watch']);
 
 process.on('exit', function () {
   if (jekyll) jekyll.kill();
-})
+});
