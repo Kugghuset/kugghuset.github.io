@@ -2,7 +2,6 @@
 layout: post
 title: Jekyll on Windows
 date: 2015-10-29
-categories: kugghuset jekyll windows github pages rouge
 author: "Kristoffer Östlund"
 lang: en
 ---
