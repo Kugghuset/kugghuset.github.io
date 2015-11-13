@@ -6,6 +6,13 @@
             animation: fadein 0.7s;
 }
 
+/* For post headers */
+.post-content {
+  h1, h2, h3, h4, h5 {
+    @extend .fade-in;
+  }
+}
+
 @keyframes fadein {
     0% { opacity: 0; }
     70% { opacity: 0; }
