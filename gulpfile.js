@@ -12,7 +12,7 @@ var _jekyll = process.platform === 'win32'
 gulp.task('serve', function () {
   if (jekyll) { jekyll.kill(); }
   
-  jekyll = spawn(_jekyll, ['serve'], { stdio: 'inherit' });
+  jekyll = spawn(_jekyll, ['serve', '--config', '_config.yml,_config_dev.yml'], { stdio: 'inherit' });
   
   jekyll.on('close', function (code) {
     console.log(code);
