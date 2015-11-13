@@ -32,13 +32,13 @@ During the installation, I ticked the box to add `ruby` (and `gem`) to my PATH v
 
 When the installation is finshed, open the Command Prompt, either by finding it in the Start Menu (or Start Screen if you're on Windows 8 or 8.1), or using the incredibly quick keyboard shortcut `WinKey + r` and typipng `cmd` into the little window that pops ups ([`WinKey`](https://en.wikipedia.org/wiki/Windows_key) is the key with the Windows Logo on it). This should open the Command Prompt into which it's just to type:
 
-{% highlight shell %}
+{% highlight bash %}
 gem install jekyll
 {% endhighlight %}
 
 The last thing we need to do is to ensure the gem `rouge` is installed. We want Rouge simply because the Pygments seems to not work too nicely on Windows (I get some very mean looking error messages when trying to use it*). These two are [syntax highlighters](https://en.wikipedia.org/wiki/Syntax_highlighting), where Rouge is written in Ruby and [Pygments is based on Python](http://jekyll-windows.juthilo.com/3-syntax-highlighting/). Just like installling Jekyll is easy, so is Rouge:
 
-{% highlight shell %}
+{% highlight bash %}
 gem install rouge
 {% endhighlight %}
 
@@ -47,7 +47,7 @@ gem install rouge
 
 Creating a new project is only a line away, so let's get to it, I'll call the project `mostly-harmless`  (if you want to host this on [GitHub Pages](https://pages.github.com/) I suggest you give it the name of ``<username>.github.io``, but that's up to you!). First I'll create the project and then cd into it.
 
-{% highlight shell %}
+{% highlight bash %}
 jekyll new mostly-harmless
 cd mostly-harmless
 {% endhighlight %}
@@ -78,7 +78,7 @@ highlighter: rouge
 
 Just adding that file won't do much, we need to tell Jekyll to use it. You do this by running `jekyll serve` with the `--config` flag. To use both config files (which is what we want), we'll have to _chain_ the config files, which is done by a single comma, like so: `--config _config.yml,_config_dev.yml`. If we combine those the command to run will be as below, and should work perfectly.
 
-{% highlight shell %}
+{% highlight bash %}
 jekyll serve --config _config.yml,_config_dev.yml
 {% endhighlight %}
 
@@ -128,14 +128,14 @@ _Kristoffer Östlund_
 
 To be able to use gulp, you'll need [NodeJS](https://nodejs.org/en/) and [Gulp](http://gulpjs.com/). In the Command Prompt (when NodeJS is installed) run:
 
-{% highlight shell %}
+{% highlight bash %}
 npm install -g gulp
 npm install --save-dev gulp gulp-livereload
 {% endhighlight %}
 
 And then from the Command Prompt run:
 
-{% highlight shell %}
+{% highlight bash %}
 gulp
 {% endhighlight %}
 
