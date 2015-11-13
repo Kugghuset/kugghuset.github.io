@@ -2,6 +2,8 @@
 
 var gulp = require('gulp');
 var spawn = require('child_process').spawn;
+var exec = require('child_process').exec;
+var shell = require('shelljs');
 var livereload = require('gulp-livereload');
 
 var jekyll;
@@ -20,6 +22,14 @@ gulp.task('serve', function () {
   jekyll.on('close', function (code) {
     console.log(code);
   });
+});
+
+// Builds the jekyll page with the --config flag set to _config.yml,_config_dev.yml
+gulp.task('build', function () {
+  
+  shell.exec('jekyll build --config _config.yml,_config_dev.yml');
+  // Without this, gulp never closes.
+  shell.exit(0);
 });
 
 // Super simple task to reload the page on changes.
