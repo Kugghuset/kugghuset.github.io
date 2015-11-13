@@ -30,13 +30,13 @@ All we need installed (except Jekyll itself) is included in the RubyInstaller do
 
 During the installation, I ticked the box to add `ruby` (and `gem`) to my PATH variable, which gives me easy access via the Command Prompt, from which essentially everything Ruby related is done. (I favor using the Command Prompt for as much as possible, especially since it in Windows 10 includes copy/paste using _keyboard shortcuts_!)
 
-When the installation is finshed, open the Command Prompt, either by finding it in the Start Menu (or Start Screen if you're on Windows 8 or 8.1), or using the incredibly quick keyboard shortcut `WinKey + r` and typipng `cmd` into the little window that pops ups ([`WinKey`](https://en.wikipedia.org/wiki/Windows_key) is the key with the Windows Logo on it). This should open the Command Prompt into which it's just to type:
+When the installation is finished, open the Command Prompt, either by finding it in the Start Menu (or Start Screen if you're on Windows 8 or 8.1), or using the incredibly quick keyboard shortcut `WinKey + r` and typipng `cmd` into the little window that pops ups ([`WinKey`](https://en.wikipedia.org/wiki/Windows_key) is the key with the Windows Logo on it). This should open the Command Prompt into which it's just to type:
 
 {% highlight bash %}
 gem install jekyll
 {% endhighlight %}
 
-The last thing we need to do is to ensure the gem `rouge` is installed. We want Rouge simply because the Pygments seems to not work too nicely on Windows (I get some very mean looking error messages when trying to use it*). These two are [syntax highlighters](https://en.wikipedia.org/wiki/Syntax_highlighting), where Rouge is written in Ruby and [Pygments is based on Python](http://jekyll-windows.juthilo.com/3-syntax-highlighting/). Just like installling Jekyll is easy, so is Rouge:
+The last thing we need to do is to ensure the gem `rouge` is installed. We want Rouge simply because the Pygments seems to not work too nicely on Windows (I get this very mean looking error messages when trying to use it*). These two are [syntax highlighters](https://en.wikipedia.org/wiki/Syntax_highlighting), where Rouge is written in Ruby and [Pygments is based on Python](http://jekyll-windows.juthilo.com/3-syntax-highlighting/). Just like installling Jekyll is easy, so is Rouge:
 
 {% highlight bash %}
 gem install rouge
