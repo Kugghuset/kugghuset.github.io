@@ -1,5 +1,9 @@
-- name: Kugghuset homepage
-  url: http://www.kugghuset.se/
-
-- name: About
-  url: http://www.kugghuset.se/om-kugghuset/ 
+us:
+  - name: Kugghuset homepage
+    url: http://www.kugghuset.se/
+  
+  - name: About us
+    url: http://www.kugghuset.se/om-kugghuset/ 
+    
+  - name: Klarify
+    url: http://klarify.hemsida24.se/
