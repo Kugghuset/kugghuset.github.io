@@ -132,6 +132,20 @@
   text-align: center;
   padding: 20px 0;
 }
+.footer-left {
+  text-align: left;
+  padding: 20px 0;
+}
+.footer-right {
+  text-align: right;
+  padding: 20px 0;
+}
+
+@include media-query($on-palm) {
+  .footer-centered,.footer-left, .footer-right {
+    text-align: center;
+  }
+}
 
 .footer-heading {
   font-size: 18px;

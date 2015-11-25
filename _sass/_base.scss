@@ -27,6 +27,15 @@ body {
     overflow-x: hidden;
 }
 
+// Make sure pure-g isn't ever the sole parent for plain text
+.pure-g {
+  font-size: 0;
+  & > * {
+    font-size: $font-size-body;
+    line-height: $line-height;
+  }
+}
+
 
 
 /**
