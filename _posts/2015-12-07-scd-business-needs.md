@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Slowly Changing Dimensions - with business needs
-date: 2015-11-27
+date: 2015-12-07
 author: "Michael Tracey"
 lang: en
 ---
