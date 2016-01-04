@@ -5,6 +5,9 @@ var spawn = require('child_process').spawn;
 var exec = require('child_process').exec;
 var shell = require('shelljs');
 var livereload = require('gulp-livereload');
+var sourcemaps = require('gulp-sourcemaps');
+var babel = require('gulp-babel')
+var concat = require('gulp-concat');
 
 var jekyll;
 // process name for jekyll
@@ -32,6 +35,17 @@ gulp.task('build', function () {
   shell.exit(0);
 });
 
+gulp.task('babel', function () {
+  gulp.src('./assets/**/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(concat('main.compiled.js'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./_site/assets/scripts'))
+});
+
 // Super simple task to reload the page on changes.
 gulp.task('reload', function () {
   livereload.reload();
@@ -43,14 +57,15 @@ gulp.task('reload-css', function () {
 
 // Watches for changes in the _site folder, as it is what is served
 gulp.task('watch', function () {
-  gulp.watch('./_site/**/*.{html,js}', ['reload']);
+  gulp.watch('./_site/**/*.{html}', ['reload']);
+  gulp.watch('./assets/**/*.js', ['babel']);
   gulp.watch('./_site/**/*.css', ['reload-css']);
 });
 
 // Initiate livereload
 livereload.listen();
 
-gulp.task('default', ['serve', 'watch']);
+gulp.task('default', ['serve', 'babel', 'watch']);
 
 // Kill jekyll if it's still running on shut down.
 process.on('exit', function () {

@@ -1,4 +1,4 @@
-(function () {
+(() => {
   'use strict'
   
   /**
@@ -7,12 +7,12 @@
    * Credit to user hitesh kumar on StackOverflow
    * http://stackoverflow.com/a/31539834/3593017
    */
-  var transformProp = (function () {
-    var testEl = document.createElement('div');
+  const transformProp = (function () {
+    let testEl = document.createElement('div');
     if (testEl.style.transform == null) {
       var vendors = ['Webkit', 'Moz', 'ms'];
       for (var i = 0; i < vendors.length; i++) {
-        var vendor = vendors[i];
+        let vendor = vendors[i];
         if (testEl.style[vendor + 'Transform'] !== undefined) {
           testEl = null;
           return vendor + 'Transform';
@@ -23,8 +23,8 @@
     return 'transform';
   })();
   
-  var hamburger = document.getElementById('hamburger');
-  var pageWrapper = document.getElementById('page-wrapper');
+  const hamburger = document.getElementById('hamburger');
+  const pageWrapper = document.getElementById('page-wrapper');
 
   function hamburgerClickHandler(e) {
     if (/ push-open/g.test(pageWrapper.className)) {

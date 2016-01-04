@@ -17,9 +17,14 @@
   },
   "homepage": "https://github.com/Kugghuset/kugghuset.github.io#readme",
   "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
     "browser-sync": "^2.9.11",
     "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-concat": "^2.6.0",
     "gulp-livereload": "^3.8.1",
+    "gulp-sourcemaps": "^1.6.0",
     "shelljs": "^0.5.3"
-  }
+  },
+  "dependencies": {}
 }

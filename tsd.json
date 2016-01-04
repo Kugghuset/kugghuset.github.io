@@ -6,19 +6,28 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "orchestrator/orchestrator.d.ts": {
-      "commit": "4f7b7e01d3a9622bfab0bef469e169529e60c66b"
+      "commit": "bdaf2f0eb19edee26248c80bab4947e9b70e4217"
     },
     "gulp/gulp.d.ts": {
-      "commit": "4f7b7e01d3a9622bfab0bef469e169529e60c66b"
+      "commit": "bdaf2f0eb19edee26248c80bab4947e9b70e4217"
     },
     "q/Q.d.ts": {
-      "commit": "4f7b7e01d3a9622bfab0bef469e169529e60c66b"
+      "commit": "bdaf2f0eb19edee26248c80bab4947e9b70e4217"
     },
     "node/node.d.ts": {
-      "commit": "4f7b7e01d3a9622bfab0bef469e169529e60c66b"
+      "commit": "bdaf2f0eb19edee26248c80bab4947e9b70e4217"
     },
     "shelljs/shelljs.d.ts": {
-      "commit": "4f7b7e01d3a9622bfab0bef469e169529e60c66b"
+      "commit": "bdaf2f0eb19edee26248c80bab4947e9b70e4217"
+    },
+    "gulp-babel/gulp-babel.d.ts": {
+      "commit": "bdaf2f0eb19edee26248c80bab4947e9b70e4217"
+    },
+    "chokidar/chokidar.d.ts": {
+      "commit": "bdaf2f0eb19edee26248c80bab4947e9b70e4217"
+    },
+    "browser-sync/browser-sync.d.ts": {
+      "commit": "bdaf2f0eb19edee26248c80bab4947e9b70e4217"
     }
   }
 }
