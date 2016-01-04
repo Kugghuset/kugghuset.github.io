@@ -37,9 +37,14 @@ gulp.task('reload', function () {
   livereload.reload();
 });
 
+gulp.task('reload-css', function () {
+  livereload.changed('./_site/css/main.css');
+});
+
 // Watches for changes in the _site folder, as it is what is served
 gulp.task('watch', function () {
-  gulp.watch(['./_site/**/*.html'], ['reload']);
+  gulp.watch('./_site/**/*.{html,js}', ['reload']);
+  gulp.watch('./_site/**/*.css', ['reload-css']);
 });
 
 // Initiate livereload
