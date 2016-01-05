@@ -1,5 +1,6 @@
 'use strict'
 
+var os = require('os');
 var gulp = require('gulp');
 var spawn = require('child_process').spawn;
 var exec = require('child_process').exec;
@@ -8,6 +9,11 @@ var livereload = require('gulp-livereload');
 var sourcemaps = require('gulp-sourcemaps');
 var babel = require('gulp-babel')
 var concat = require('gulp-concat');
+var open = require('gulp-open');
+
+var browser = os.platform() === 'linux' ? 'google-chrome' : (
+  os.platform() === 'darwin' ? 'google chrome' : (
+  os.platform() === 'win32' ? 'chrome' : 'firefox'));
 
 var jekyll;
 // process name for jekyll
@@ -62,10 +68,15 @@ gulp.task('watch', function () {
   gulp.watch('./_site/**/*.css', ['reload-css']);
 });
 
+gulp.task('open', function () {
+  gulp.src(__filename)
+    .pipe(open({ uri: 'http://localhost:4000', app: browser }));
+});
+
 // Initiate livereload
 livereload.listen();
 
-gulp.task('default', ['serve', 'babel', 'watch']);
+gulp.task('default', ['serve', 'babel', 'watch', 'open']);
 
 // Kill jekyll if it's still running on shut down.
 process.on('exit', function () {

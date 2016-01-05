@@ -23,6 +23,7 @@
     "gulp-babel": "^6.1.1",
     "gulp-concat": "^2.6.0",
     "gulp-livereload": "^3.8.1",
+    "gulp-open": "^1.0.0",
     "gulp-sourcemaps": "^1.6.0",
     "shelljs": "^0.5.3"
   },
