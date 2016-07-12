@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DAX-tutorial Calculate the number of days left until an upcoming date
+title: "DAX-tutorial: Calculate the number of days left until an upcoming date"
 date: 2016-07-12
 author: "Lisa Bányay"
 lang: en
